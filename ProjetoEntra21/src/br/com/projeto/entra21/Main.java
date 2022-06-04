@@ -1,4 +1,4 @@
-package br.com.timeamarelo.projeto;
+package br.com.projeto.entra21;
 
 import java.util.Scanner;
 
@@ -49,3 +49,4 @@ public class Main {
 	}
 
 }
+
