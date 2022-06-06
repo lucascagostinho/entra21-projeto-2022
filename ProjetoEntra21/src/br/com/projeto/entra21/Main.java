@@ -29,7 +29,7 @@ public class Main {
 				break;
 
 			default:
-				System.out.println("Digite uma opÁ„o v·lida...");
+				System.out.println("Digite uma op√ß√£o v√°lida...");
 				break;
 			}
 
@@ -39,7 +39,7 @@ public class Main {
 
 	private static String menu() {
 
-		String menu = "Escolha uma opÁ„o do menu\n";
+		String menu = "Escolha uma op√ß√£o do menu\n";
 		menu += "\n0 - Sair";
 		menu += "\n1 - Criar Cadastro";
 		menu += "\n2 - Login";
