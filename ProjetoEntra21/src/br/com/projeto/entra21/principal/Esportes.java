@@ -10,19 +10,6 @@ public class Esportes {
 			add("Corrida");
 			add("Escalada");
 			add("Futebol");
-			add("Skate");
-			add("Futvolei");
-			add("Basquete");
-			add("Trilha");
-			add("Natação");
-			add("Futsal");
-			add("Tênis");
-			add("Tênis de mesa");
-			add("Judô");
-			add("Jiu-Jitsu");
-			add("Boxe");
-			add("Handball");
-			add("Surfe");
 
 		}
 	};
