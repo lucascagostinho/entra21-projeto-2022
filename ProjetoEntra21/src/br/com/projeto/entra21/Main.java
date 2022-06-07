@@ -2,11 +2,16 @@ package br.com.projeto.entra21;
 
 import java.util.Scanner;
 
+import br.com.projeto.entra21.principal.Cadastro;
+import br.com.projeto.entra21.principal.Login;
+
 public class Main {
 
 	static Scanner input = new Scanner(System.in);
 
 	public static void main(String[] args) {
+
+		// Criar um cadastro com login e senha
 
 		byte option;
 
@@ -21,32 +26,32 @@ public class Main {
 				break;
 
 			case 1:
-				// cadastro
+				Cadastro.cadastro();
 				break;
 
 			case 2:
-				// login
+				Login.email();
 				break;
 
 			default:
-				System.out.println("Digite uma op√ß√£o v√°lida...");
+				System.out.println("Digite uma opÁ„o v·lida...");
 				break;
+
 			}
 
 		} while (option != 0);
-		System.out.println("Volte sempre.");
+		System.out.println("Obrigado por usar o programa 'Cadastro de usu·rio'");
 	}
 
-	private static String menu() {
+	public static String menu() {
 
-		String menu = "Escolha uma op√ß√£o do menu\n";
-		menu += "\n0 - Sair";
-		menu += "\n1 - Criar Cadastro";
-		menu += "\n2 - Login";
+		String menu = "Escolha uma opÁ„o do menu:";
+		menu += "\n\t0 - Sair";
+		menu += "\n\t1 - Cadastrar-se";
+		menu += "\n\t2 - Login";
 
 		return menu;
 
 	}
 
 }
-
