@@ -1,8 +1,10 @@
 package br.com.projeto.entra21;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
-import br.com.projeto.entra21.principal.Cadastro;
+import br.com.projeto.entra21.principal.Register;
 import br.com.projeto.entra21.principal.Login;
 
 public class Main {
@@ -11,43 +13,47 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		// Criar um cadastro com login e senha
-
-		byte option;
+		byte option = 0;
 
 		do {
 			System.out.println(menu());
-			option = input.nextByte();
+			try {
+				option = input.nextByte();
+			} catch (Exception e) {
+
+				System.out.println("Invalid option.");
+			}
 
 			switch (option) {
 
 			case 0:
-				System.out.println("Saindo...");
+				System.out.println("Going out...");
 				break;
 
 			case 1:
-				Cadastro.cadastro();
+				new Register("Register", new ArrayList<>(Arrays.asList("Register Person", "RegisterCoach")))
+						.optionsMenu();
 				break;
 
 			case 2:
-				Login.email();
+				new Login("Login", new ArrayList<>(Arrays.asList("Login"))).optionsMenu();
 				break;
 
 			default:
-				System.out.println("Digite uma opção válida...");
+				System.out.println("Invalid option");
 				break;
 
 			}
 
 		} while (option != 0);
-		System.out.println("Obrigado por usar o programa 'Cadastro de usuário'");
+		System.out.println("Thank you and welcome back!");
 	}
 
 	public static String menu() {
 
-		String menu = "Escolha uma opção do menu:";
-		menu += "\n\t0 - Sair";
-		menu += "\n\t1 - Cadastrar-se";
+		String menu = "Choose an option:";
+		menu += "\n\t0 - Exit";
+		menu += "\n\t1 - Register";
 		menu += "\n\t2 - Login";
 
 		return menu;
