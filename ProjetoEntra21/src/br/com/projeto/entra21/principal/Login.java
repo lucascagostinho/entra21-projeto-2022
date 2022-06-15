@@ -5,6 +5,9 @@ import java.util.Scanner;
 
 import br.com.projeto.entra21.Menu;
 import br.com.projeto.entra21.interfaces.Dados;
+import br.com.projeto.entra21.menus.MenuPrincipal;
+
+// Precisa ser ajustado
 
 public class Login extends Menu implements Dados {
 
@@ -17,7 +20,7 @@ public class Login extends Menu implements Dados {
 	public byte captureOption() {
 
 		byte option = 0;
-		
+
 		try {
 			option = super.captureOption();
 		} catch (Exception e) {
@@ -45,12 +48,14 @@ public class Login extends Menu implements Dados {
 		usuarioEmail = input.next();
 
 		try {
-			if (usuarioEmail.equals(email.get(email.indexOf(usuarioEmail)))) {
-				System.out.println("Cheguei aqui");
-				// retornar um método listando o perfil dele,e dentro vai ter um método
-				// praticar();
+			for (Perfil perfil : perfis) {
+				if (perfil.getEmail().equals(usuarioEmail)) {
+					System.out.println("Cheguei aqui");
+					MenuPrincipal.executar();
+				}
 
 			}
+
 		} catch (Exception e) {
 
 			System.out.println("User doesn't exist.");

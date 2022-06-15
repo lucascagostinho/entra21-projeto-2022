@@ -1,17 +1,22 @@
 package br.com.projeto.entra21.principal;
 
-public class Pessoa {
+import br.com.projeto.entra21.Menu;
 
-	public String name;
-	public String lastName;
-	public String birthDate;
-	public String genre;
-	
-	public Pessoa() {
+public class Perfil {
+
+	private String name;
+	private String lastName;
+	private String birthDate;
+	private String genre;
+	private String email;
+	private String password;
+	private String graduation;
+
+	public Perfil() {
 		super();
 	}
 
-	public Pessoa(String name, String lastName, String birthDate, String genre) {
+	public Perfil(String name, String lastName, String birthDate, String genre) {
 		super();
 		this.name = name;
 		this.lastName = lastName;
@@ -50,8 +55,25 @@ public class Pessoa {
 	public void setGenre(String genre) {
 		this.genre = genre;
 	}
-	
-	
-	
-	
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public void setGraduation(String next) {
+		this.graduation = graduation;
+	}
+
 }
