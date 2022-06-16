@@ -1,8 +1,13 @@
 package br.com.projeto.entra21.cadastro;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
+
+import br.com.projeto.entra21.crud.ICrud;
+import br.com.projeto.entra21.crud.PraticanteCRUD;
 import br.com.projeto.entra21.menus.Menu;
+import br.com.projeto.entra21.menus.MenuCadastro;
 import br.com.projeto.entra21.menus.MenuPrincipal;
 import br.com.projeto.entra21.principal.Coach;
 import br.com.projeto.entra21.principal.Dados;
@@ -11,34 +16,12 @@ import br.com.projeto.entra21.principal.Praticante;
 
 // Precisa ser ajustado
 
-public class Login extends Menu {
+public class Login extends PraticanteCRUD{
 
-	public Login(String title, ArrayList<String> options) {
-		super(title, options);
-
-	}
-
-	@Override
-	public byte captureOption() {
-
-		byte option = 0;
-
-		try {
-			option = super.captureOption();
-		} catch (Exception e) {
-
-			System.out.println("Invalid option.");
-		}
-
-		switch (option) {
-
-		case 1:
-			login();
-			break;
-
-		}
-		return option;
-
+	
+	public Login(String titulo, ArrayList<String> assuntos) {
+		super(titulo, assuntos);
+		// TODO Auto-generated constructor stub
 	}
 
 	static Scanner input = new Scanner(System.in);
@@ -74,6 +57,24 @@ public class Login extends Menu {
 		}
 		if (!localizado) {
 			System.out.println("Não existe ninguém com esse e-mail");
+			System.out.println("Faça seu cadastro.");
+			
+			System.out.println("1 - Cadastrar Praticante");
+			System.out.println("2 - Cadastrar Coach");
+			
+			byte option;
+			option= input.nextByte();
+			
+			switch (option) {
+					
+			case 1:
+				
+				break;
+			
+			default:
+				throw new IllegalArgumentException("Unexpected value: " + option);
+			}
+			
 		}
 	}
 
@@ -83,4 +84,5 @@ public class Login extends Menu {
 		return password.equals(input.next());
 	}
 
+	
 }

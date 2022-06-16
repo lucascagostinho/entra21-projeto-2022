@@ -21,5 +21,6 @@ public interface ICrud<A> {
 	public A captureValues();
 
 	public void viewDetails(A complete);
+	
 
 }

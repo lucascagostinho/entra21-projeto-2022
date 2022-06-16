@@ -34,12 +34,7 @@ public class Main {
 				break;
 
 			case 1:
-				new Register("Register", new ArrayList<>(Arrays.asList("Register Person", "RegisterCoach")))
-						.optionsMenu();
-				break;
-
-			case 2:
-				new Login("Login", new ArrayList<>(Arrays.asList("Login"))).optionsMenu();
+				Login.login();
 				break;
 
 			default:
@@ -56,8 +51,8 @@ public class Main {
 
 		String menu = "Choose an option:";
 		menu += "\n\t0 - Exit";
-		menu += "\n\t1 - Register";
-		menu += "\n\t2 - Login";
+		menu += "\n\t1 - Login";
+		
 
 		return menu;
 

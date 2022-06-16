@@ -6,8 +6,14 @@ import java.util.Scanner;
 
 import br.com.projeto.entra21.cadastro.Login;
 import br.com.projeto.entra21.cadastro.Register;
+import br.com.projeto.entra21.interfaces.ComportamentosPerfil;
 
-public class MenuPrincipal {
+public class MenuPrincipal extends ComportamentosPerfil{
+
+	public MenuPrincipal(String titulo, ArrayList<String> assuntos) {
+		super(titulo, assuntos);
+		// TODO Auto-generated constructor stub
+	}
 
 	static Scanner input = new Scanner(System.in);
 //https://github.com/oliota/entra21-modelo-projeto-backend-2022/blob/agil-logica-poo-avancado/ModeloBackendEntra21-2022/src/br/com/entra21/modelo2022/backend/area/logada/cadastros/crud/ClienteCRUD.java
@@ -34,11 +40,11 @@ public class MenuPrincipal {
 				break;
 
 			case 1:
-				new MenuCadastro("Menu de Cadastros", new ArrayList<>(Arrays.asList("coachs","praticantes"))).optionsMenu();
+				new MenuCadastro("Menu de Cadastros", new ArrayList<>(Arrays.asList("Coachs","Praticantes"))).optionsMenu();
 				break;
 
 			case 2:
-
+				ComportamentosPerfil.iniciarPratica();
 				break;
 
 			default:
@@ -55,7 +61,7 @@ public class MenuPrincipal {
 		String menu = "Choose an option:";
 		menu += "\n\t0 - Exit";
 		menu += "\n\t1 - Cadastros";
-		menu += "\n\t2 - OP2";
+		menu += "\n\t2 - Praticar";
 
 		return menu;
 

@@ -10,6 +10,8 @@ import br.com.projeto.entra21.principal.Praticante;
 
 public class PraticanteCRUD extends Menu implements ICrud<Praticante> {
 
+	
+	
 	public PraticanteCRUD(String titulo, ArrayList<String> assuntos) {
 		super(titulo, assuntos);
 	}
