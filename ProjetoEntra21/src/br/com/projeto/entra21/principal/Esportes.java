@@ -7,9 +7,22 @@ public class Esportes {
 	ArrayList<String> esporteNome = new ArrayList<>() {
 		{
 
+			add("Futebol de campo");
+			add("Futebol quadra society");
+			add("Futsal");
+			add("Futvolei");
 			add("Corrida");
+			add("Ciclismo");
+			add("Beach Tennis");
 			add("Escalada");
-
+			add("Surf");
+			add("Volei de praia");
+			add("Volei de quadra");
+			add("Tenis");
+			add("Tênis de mesa");
+			add("Natação");
+			add("Skate");
+			add("Academia");
 		}
 	};
 
