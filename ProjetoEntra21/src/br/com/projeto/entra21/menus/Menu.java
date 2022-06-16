@@ -1,7 +1,9 @@
-package br.com.projeto.entra21;
+package br.com.projeto.entra21.menus;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import br.com.projeto.entra21.principal.Perfil;
 
 public class Menu {
 
@@ -58,5 +60,14 @@ public class Menu {
 	public void setInput(Scanner input) {
 		this.input = input;
 	}
-	
+
+	public Scanner inputEntrada() {
+		return input;
+	}
+
+	public Perfil search() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

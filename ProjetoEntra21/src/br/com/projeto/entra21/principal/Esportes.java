@@ -9,7 +9,6 @@ public class Esportes {
 
 			add("Corrida");
 			add("Escalada");
-			add("Futebol");
 
 		}
 	};

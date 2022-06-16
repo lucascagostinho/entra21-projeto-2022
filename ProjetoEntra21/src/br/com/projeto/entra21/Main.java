@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import br.com.projeto.entra21.principal.Register;
-import br.com.projeto.entra21.principal.Login;
+import br.com.projeto.entra21.cadastro.Login;
+import br.com.projeto.entra21.cadastro.Register;
+import br.com.projeto.entra21.principal.Dados;
 
 public class Main {
 
@@ -14,7 +15,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		byte option = 0;
-
+		Dados.inicializarListas();
 		do {
 			System.out.println(menu());
 			try {
@@ -22,6 +23,8 @@ public class Main {
 			} catch (Exception e) {
 
 				System.out.println("Invalid option.");
+				option = -2;
+				continue;
 			}
 
 			switch (option) {
@@ -31,12 +34,7 @@ public class Main {
 				break;
 
 			case 1:
-				new Register("Register", new ArrayList<>(Arrays.asList("Register Person", "RegisterCoach")))
-						.optionsMenu();
-				break;
-
-			case 2:
-				new Login("Login", new ArrayList<>(Arrays.asList("Login"))).optionsMenu();
+				Login.login();
 				break;
 
 			default:
@@ -53,8 +51,8 @@ public class Main {
 
 		String menu = "Choose an option:";
 		menu += "\n\t0 - Exit";
-		menu += "\n\t1 - Register";
-		menu += "\n\t2 - Login";
+		menu += "\n\t1 - Login";
+		
 
 		return menu;
 
