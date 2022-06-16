@@ -4,8 +4,9 @@ import java.util.ArrayList;
 
 import br.com.projeto.entra21.crud.CoachCRUD;
 import br.com.projeto.entra21.crud.ICrud;
+import br.com.projeto.entra21.crud.PraticanteCRUD;
 
-public class MenuCadastro extends Menu{
+public class MenuCadastro extends Menu {
 
 	public MenuCadastro(String titulo, ArrayList<String> assuntos) {
 		super(titulo, assuntos);
@@ -13,20 +14,19 @@ public class MenuCadastro extends Menu{
 
 	@Override
 	public byte captureOption() {
-		byte option = super.captureOption(); 
-		
+		byte option = super.captureOption();
+
 		switch (option) {
 		case 1:
-			new CoachCRUD("Cadastro de Coachs",ICrud.options).optionsMenu();;
+			new CoachCRUD("Cadastro de Coachs", ICrud.options).optionsMenu();
 			break;
 
 		case 2:
+			new PraticanteCRUD("Cadastro de Praticantes", ICrud.options).optionsMenu();
 			break;
 		}
 		return option;
-		
-		
+
 	}
-	
-	
+
 }

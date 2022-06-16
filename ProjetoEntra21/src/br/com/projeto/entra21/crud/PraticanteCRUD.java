@@ -6,10 +6,11 @@ import br.com.projeto.entra21.menus.Menu;
 import br.com.projeto.entra21.principal.Coach;
 import br.com.projeto.entra21.principal.Dados;
 import br.com.projeto.entra21.principal.Perfil;
+import br.com.projeto.entra21.principal.Praticante;
 
-public class CoachCRUD extends Menu implements ICrud<Coach> {
+public class PraticanteCRUD extends Menu implements ICrud<Praticante> {
 
-	public CoachCRUD(String titulo, ArrayList<String> assuntos) {
+	public PraticanteCRUD(String titulo, ArrayList<String> assuntos) {
 		super(titulo, assuntos);
 	}
 
@@ -19,7 +20,7 @@ public class CoachCRUD extends Menu implements ICrud<Coach> {
 
 		switch (option) {
 		case 1:
-			list(Dados.coachs);
+			list(Dados.praticantes);
 			break;
 		case 2:
 			add();
@@ -39,43 +40,43 @@ public class CoachCRUD extends Menu implements ICrud<Coach> {
 	}
 
 	@Override
-	public void list(ArrayList<Coach> list) {
-		list.forEach(coach -> {
-			System.out.println(coach.getEmail() + "---" + coach.getName());
+	public void list(ArrayList<Praticante> list) {
+		list.forEach(praticante -> {
+			System.out.println(praticante.getEmail() + "---" + praticante.getName());
 		});
 
 	}
 
 	@Override
 	public void add() {
-		Coach novo = captureValues();
+		Praticante novo = captureValues();
 		if (search(novo) != null) {
 			System.out.println("Não foi possível adicionar");
 		} else {
-			Dados.coachs.add(novo);
-			System.out.println("Coach adicionado");
+			Dados.praticantes.add(novo);
+			System.out.println("Praticante adicionado");
 		}
 	}
 
 	@Override
-	public Coach search(Coach key) {
-		Coach encontradoCoach = null;
-		for (Coach coach : Dados.coachs) {
-			if (coach.getEmail().equals(key.getEmail())) {
-				return coach;
+	public Praticante search(Praticante key) {
+		Praticante encontrado = null;
+		for (Praticante praticante : Dados.praticantes) {
+			if (praticante.getEmail().equals(key.getEmail())) {
+				return praticante;
 			}
 		}
 		return null;
 	}
 
 	@Override
-	public void edit(Coach key) {
-		Coach atual = search(key);
+	public void edit(Praticante key) {
+		Praticante atual = search(key);
 		if (atual != null) {
-			System.out.println("Alterando o Coach");
-			Coach editado = captureValues();
-			Dados.coachs.set(Dados.coachs.indexOf(atual), editado);
-			System.out.println("Coach editado");
+			System.out.println("Alterando o Praticante");
+			Praticante editado = captureValues();
+			Dados.praticantes.set(Dados.praticantes.indexOf(atual), editado);
+			System.out.println("Praticante editado");
 		} else {
 			System.out.println("Não foi possivel editar");
 		}
@@ -83,28 +84,28 @@ public class CoachCRUD extends Menu implements ICrud<Coach> {
 	}
 
 	@Override
-	public void delete(Coach key) {
-		Coach busca = search(key);
+	public void delete(Praticante key) {
+		Praticante busca = search(key);
 		if (busca == null) {
 			System.out.println("Não foi possivel deletar");
 		} else {
-			System.out.println("Coach deletado");
-			Dados.coachs.remove(busca);
+			System.out.println("Praticante deletado");
+			Dados.praticantes.remove(busca);
 		}
 
 	}
 
 	@Override
-	public Coach captureKey() {
+	public Praticante captureKey() {
 		System.out.println("Informe o email");
-		Coach chave = new Coach();
+		Praticante chave = new Praticante();
 		chave.setEmail(super.inputEntrada().next());
 		return chave;
 	}
 
 	@Override
-	public Coach captureValues() {
-		Coach formulario = new Coach();
+	public Praticante captureValues() {
+		Praticante formulario = new Praticante();
 		System.out.println("Name: ");
 		formulario.setName(super.getInput().next());
 
@@ -120,13 +121,12 @@ public class CoachCRUD extends Menu implements ICrud<Coach> {
 	}
 
 	@Override
-	public void viewDetails(Coach complete) {
+	public void viewDetails(Praticante complete) {
 		if (complete == null) {
-			System.out.println("Nenhum Coach localizado");
+			System.out.println("Nenhum Praticante localizado");
 		} else {
-			System.out.println("Coach: " + complete.getName());
+			System.out.println("Praticante: " + complete.getName());
 			System.out.println("Email " + complete.getEmail());
-			System.out.println("Frase Motivacional " + complete.getFraseMotivacional());
 			System.out.println("Data Nascimento " + complete.getBirthDate());
 		}
 	}
