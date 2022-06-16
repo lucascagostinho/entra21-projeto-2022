@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import br.com.projeto.entra21.principal.Register;
-import br.com.projeto.entra21.principal.Login;
+import br.com.projeto.entra21.cadastro.Login;
+import br.com.projeto.entra21.cadastro.Register;
+import br.com.projeto.entra21.principal.Dados;
 
 public class Main {
 
@@ -14,7 +15,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		byte option = 0;
-
+		Dados.inicializarListas();
 		do {
 			System.out.println(menu());
 			try {

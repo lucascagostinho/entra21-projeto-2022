@@ -1,4 +1,4 @@
-package br.com.projeto.entra21;
+package br.com.projeto.entra21.menus;
 
 import java.util.ArrayList;
 import java.util.Scanner;

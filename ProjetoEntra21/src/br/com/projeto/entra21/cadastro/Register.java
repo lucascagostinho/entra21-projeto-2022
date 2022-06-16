@@ -1,12 +1,12 @@
-package br.com.projeto.entra21.principal;
+package br.com.projeto.entra21.cadastro;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 
-import br.com.projeto.entra21.Menu;
 import br.com.projeto.entra21.crud.ICrud;
-import br.com.projeto.entra21.interfaces.Dados;
+import br.com.projeto.entra21.menus.Menu;
+import br.com.projeto.entra21.principal.Perfil;
 
 public class Register extends Menu {
 

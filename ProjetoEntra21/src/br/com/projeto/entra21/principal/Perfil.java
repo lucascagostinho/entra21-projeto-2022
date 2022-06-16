@@ -1,6 +1,6 @@
 package br.com.projeto.entra21.principal;
 
-import br.com.projeto.entra21.Menu;
+import br.com.projeto.entra21.menus.Menu;
 
 public class Perfil {
 
@@ -14,6 +14,18 @@ public class Perfil {
 
 	public Perfil() {
 		super();
+	}
+
+	public Perfil(String name, String lastName, String birthDate, String genre, String email, String password,
+			String graduation) {
+		super();
+		this.name = name;
+		this.lastName = lastName;
+		this.birthDate = birthDate;
+		this.genre = genre;
+		this.email = email;
+		this.password = password;
+		this.graduation = graduation;
 	}
 
 	public Perfil(String name, String lastName, String birthDate, String genre) {
