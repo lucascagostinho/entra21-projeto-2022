@@ -1,28 +1,21 @@
 package br.com.projeto.entra21.principal;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Esportes {
 
-	ArrayList<String> esporteNome = new ArrayList<>() {
+	LinkedList<String> esportes = new LinkedList<>() {
 		{
 
-			add("Futebol de campo");
-			add("Futebol quadra society");
-			add("Futsal");
-			add("Futvolei");
-			add("Corrida");
-			add("Ciclismo");
-			add("Beach Tennis");
-			add("Escalada");
-			add("Surf");
-			add("Volei de praia");
-			add("Volei de quadra");
-			add("Tenis");
-			add("Tênis de mesa");
-			add("Natação");
-			add("Skate");
-			add("Academia");
+			add(Esportes2.FUTEBOl.getValor());
+			add(Esportes2.CORRIDA.getValor());
+			add(Esportes2.CICLISMO.getValor());
+			add(Esportes2.TENNIS.getValor());
+			add(Esportes2.ESCALADA.getValor());
+			add(Esportes2.SURF.getValor());
+			add(Esportes2.VOLEI.getValor());
+			add(Esportes2.NATACAO.getValor());
+			add(Esportes2.SKATE.getValor());
 		}
 	};
 
@@ -30,17 +23,17 @@ public class Esportes {
 		super();
 	}
 
-	public Esportes(ArrayList<String> esporteNome) {
+	public Esportes(LinkedList<String> esporteNome) {
 		super();
-		this.esporteNome = esporteNome;
+		this.esportes = esporteNome;
 	}
 
-	public ArrayList<String> getEsporteNome() {
-		return esporteNome;
+	public LinkedList<String> getEsporteNome() {
+		return esportes;
 	}
 
-	public void setEsporteNome(ArrayList<String> esporteNome) {
-		this.esporteNome = esporteNome;
+	public void setEsporteNome(LinkedList<String> esporteNome) {
+		this.esportes = esporteNome;
 	}
 
 }

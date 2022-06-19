@@ -4,9 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import br.com.projeto.entra21.cadastro.Login;
-import br.com.projeto.entra21.cadastro.Register;
-import br.com.projeto.entra21.interfaces.ComportamentosPerfil;
+import br.com.projeto.entra21.principal.ComportamentosPerfil;
 
 public class MenuPrincipal extends ComportamentosPerfil{
 

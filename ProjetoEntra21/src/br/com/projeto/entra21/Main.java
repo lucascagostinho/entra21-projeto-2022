@@ -1,11 +1,8 @@
 package br.com.projeto.entra21;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 import br.com.projeto.entra21.cadastro.Login;
-import br.com.projeto.entra21.cadastro.Register;
 import br.com.projeto.entra21.principal.Dados;
 
 public class Main {
@@ -52,7 +49,6 @@ public class Main {
 		String menu = "Choose an option:";
 		menu += "\n\t0 - Exit";
 		menu += "\n\t1 - Login";
-		
 
 		return menu;
 
