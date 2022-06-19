@@ -16,9 +16,8 @@ import br.com.projeto.entra21.principal.Praticante;
 
 // Precisa ser ajustado
 
-public class Login extends PraticanteCRUD{
+public class Login extends PraticanteCRUD {
 
-	
 	public Login(String titulo, ArrayList<String> assuntos) {
 		super(titulo, assuntos);
 		// TODO Auto-generated constructor stub
@@ -55,27 +54,7 @@ public class Login extends PraticanteCRUD{
 			}
 
 		}
-		if (!localizado) {
-			System.out.println("Não existe ninguém com esse e-mail");
-			System.out.println("Faça seu cadastro.");
-			
-			System.out.println("1 - Cadastrar Praticante");
-			System.out.println("2 - Cadastrar Coach");
-			
-			byte option;
-			option= input.nextByte();
-			
-			switch (option) {
-					
-			case 1:
-				
-				break;
-			
-			default:
-				throw new IllegalArgumentException("Unexpected value: " + option);
-			}
-			
-		}
+
 	}
 
 	private static boolean verificarSenha(String password) {
@@ -84,5 +63,4 @@ public class Login extends PraticanteCRUD{
 		return password.equals(input.next());
 	}
 
-	
 }

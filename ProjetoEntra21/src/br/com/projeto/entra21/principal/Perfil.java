@@ -1,7 +1,5 @@
 package br.com.projeto.entra21.principal;
 
-import br.com.projeto.entra21.menus.Menu;
-
 public class Perfil {
 
 	private String name;

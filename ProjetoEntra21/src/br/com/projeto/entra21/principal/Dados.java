@@ -19,7 +19,7 @@ public class Dados {
 		Coach coach1 = new Coach("Stephanie", "Dias", "27/11/1993", "F", "stephanie@email.com", "1234", "graduação"); //LocalDate ver no Crud cursos Prof
 		coach1.setFraseMotivacional("é pra frente que se anda");
 		coachs.add(coach1);
-		coachs.add(new Coach("José", "Silva", "23/08/1998", "m", "josé@email.com", "1234", "graduação"));
+		coachs.add(new Coach("José", "Silva", "23/08/1998", "m", "jose@email.com", "1234", "graduação"));
 		
 	}
 	

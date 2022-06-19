@@ -1,19 +1,18 @@
-package br.com.projeto.entra21.interfaces;
+package br.com.projeto.entra21.principal;
 
 import java.time.Duration;
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 import br.com.projeto.entra21.menus.Menu;
-import br.com.projeto.entra21.principal.Dados;
 
 public class ComportamentosPerfil extends Menu {
 
 	static Scanner input = new Scanner(System.in);
 
-	
-	
 	public ComportamentosPerfil(String titulo, ArrayList<String> assuntos) {
 		super(titulo, assuntos);
 		// TODO Auto-generated constructor stub
@@ -48,10 +47,18 @@ public class ComportamentosPerfil extends Menu {
 
 		byte option;
 
+		Esportes esporte = new Esportes();
+
+		System.out.println("Informe o esrpote que deseja praticar");
+		for (int posicao = 0; posicao < esporte.getEsporteNome().size(); posicao++) {
+			System.out.println(posicao + " - " + esporte.getEsporteNome().get(posicao));
+
+		}
+		option = input.nextByte();
+
 		Instant inicio = Instant.now();
 
 		do {
-
 			System.out.println("Digite 1 para parar de praticar.");
 			option = input.nextByte();
 
@@ -60,10 +67,9 @@ public class ComportamentosPerfil extends Menu {
 		Instant fim = Instant.now();
 
 		Duration tempo = Duration.between(inicio, fim);
-		System.out.println("Você demorou " + tempo.toSeconds());
+		System.out.println("Você Praticou " + tempo.toSeconds());
 		return tempo;
-		
-		
+
 	}
 
 }
