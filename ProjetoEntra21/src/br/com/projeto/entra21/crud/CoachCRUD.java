@@ -2,10 +2,11 @@ package br.com.projeto.entra21.crud;
 
 import java.util.ArrayList;
 
+import br.com.projeto.entra21.annotations.Reminder;
 import br.com.projeto.entra21.menus.Menu;
 import br.com.projeto.entra21.principal.Coach;
 import br.com.projeto.entra21.principal.Dados;
-import br.com.projeto.entra21.principal.Perfil;
+
 
 public class CoachCRUD extends Menu implements ICrud<Coach> {
 
@@ -14,7 +15,7 @@ public class CoachCRUD extends Menu implements ICrud<Coach> {
 	}
 
 	@Override
-	public byte captureOption() {
+	public byte captureOption() { //TODO 02-logica-herança
 		byte option = super.captureOption();
 
 		switch (option) {
@@ -38,6 +39,7 @@ public class CoachCRUD extends Menu implements ICrud<Coach> {
 		return option;
 	}
 
+	@Reminder(value = "Acessa a lista de coachs")
 	@Override
 	public void list(ArrayList<Coach> list) {
 		list.forEach(coach -> {
@@ -46,6 +48,7 @@ public class CoachCRUD extends Menu implements ICrud<Coach> {
 
 	}
 
+	@Reminder(value = "Adiciona um novo coach")
 	@Override
 	public void add() {
 		Coach novo = captureValues();
@@ -57,6 +60,7 @@ public class CoachCRUD extends Menu implements ICrud<Coach> {
 		}
 	}
 
+	@Reminder(value = "Busca dentro da lista de coachs")
 	@Override
 	public Coach search(Coach key) {
 		Coach encontradoCoach = null;
@@ -68,6 +72,7 @@ public class CoachCRUD extends Menu implements ICrud<Coach> {
 		return null;
 	}
 
+	@Reminder(value = "Edita um coach já existente.")
 	@Override
 	public void edit(Coach key) {
 		Coach atual = search(key);
@@ -82,6 +87,7 @@ public class CoachCRUD extends Menu implements ICrud<Coach> {
 
 	}
 
+	@Reminder(value = "Deleta um coach")
 	@Override
 	public void delete(Coach key) {
 		Coach busca = search(key);
@@ -94,6 +100,7 @@ public class CoachCRUD extends Menu implements ICrud<Coach> {
 
 	}
 
+	@Reminder(value = "Captura uma chave para coach")
 	@Override
 	public Coach captureKey() {
 		System.out.println("Informe o email");
@@ -102,6 +109,7 @@ public class CoachCRUD extends Menu implements ICrud<Coach> {
 		return chave;
 	}
 
+	@Reminder(value = "Captura um valor para coach")
 	@Override
 	public Coach captureValues() {
 		Coach formulario = new Coach();
@@ -119,6 +127,7 @@ public class CoachCRUD extends Menu implements ICrud<Coach> {
 		return formulario;
 	}
 
+	@Reminder(value = "Acessa os detalhes do coach")
 	@Override
 	public void viewDetails(Coach complete) {
 		if (complete == null) {

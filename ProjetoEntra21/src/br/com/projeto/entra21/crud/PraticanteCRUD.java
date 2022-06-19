@@ -2,10 +2,9 @@ package br.com.projeto.entra21.crud;
 
 import java.util.ArrayList;
 
+import br.com.projeto.entra21.annotations.Reminder;
 import br.com.projeto.entra21.menus.Menu;
-import br.com.projeto.entra21.principal.Coach;
 import br.com.projeto.entra21.principal.Dados;
-import br.com.projeto.entra21.principal.Perfil;
 import br.com.projeto.entra21.principal.Praticante;
 
 public class PraticanteCRUD extends Menu implements ICrud<Praticante> {
@@ -17,7 +16,7 @@ public class PraticanteCRUD extends Menu implements ICrud<Praticante> {
 	}
 
 	@Override
-	public byte captureOption() {
+	public byte captureOption() { //TODO 02-logica-herança
 		byte option = super.captureOption();
 
 		switch (option) {
@@ -41,6 +40,7 @@ public class PraticanteCRUD extends Menu implements ICrud<Praticante> {
 		return option;
 	}
 
+	@Reminder(value = "Acessa a lista de praticantes")
 	@Override
 	public void list(ArrayList<Praticante> list) {
 		list.forEach(praticante -> {
@@ -49,6 +49,7 @@ public class PraticanteCRUD extends Menu implements ICrud<Praticante> {
 
 	}
 
+	@Reminder(value = "Adiciona um novo praticante")
 	@Override
 	public void add() {
 		Praticante novo = captureValues();
@@ -60,6 +61,7 @@ public class PraticanteCRUD extends Menu implements ICrud<Praticante> {
 		}
 	}
 
+	@Reminder(value = "Busca dentro da lista de praticantes")
 	@Override
 	public Praticante search(Praticante key) {
 		Praticante encontrado = null;
@@ -71,6 +73,7 @@ public class PraticanteCRUD extends Menu implements ICrud<Praticante> {
 		return null;
 	}
 
+	@Reminder(value = "Edita um praticante já existente.")
 	@Override
 	public void edit(Praticante key) {
 		Praticante atual = search(key);
@@ -85,6 +88,7 @@ public class PraticanteCRUD extends Menu implements ICrud<Praticante> {
 
 	}
 
+	@Reminder(value = "Deleta um praticante")
 	@Override
 	public void delete(Praticante key) {
 		Praticante busca = search(key);
@@ -97,6 +101,7 @@ public class PraticanteCRUD extends Menu implements ICrud<Praticante> {
 
 	}
 
+	@Reminder(value = "Captura uma chave para praticante")
 	@Override
 	public Praticante captureKey() {
 		System.out.println("Informe o email");
@@ -105,6 +110,7 @@ public class PraticanteCRUD extends Menu implements ICrud<Praticante> {
 		return chave;
 	}
 
+	@Reminder(value = "Captura um valor para praticante")
 	@Override
 	public Praticante captureValues() {
 		Praticante formulario = new Praticante();
@@ -122,6 +128,7 @@ public class PraticanteCRUD extends Menu implements ICrud<Praticante> {
 		return formulario;
 	}
 
+	@Reminder(value = "Acessa os detalhes do praticante")
 	@Override
 	public void viewDetails(Praticante complete) {
 		if (complete == null) {

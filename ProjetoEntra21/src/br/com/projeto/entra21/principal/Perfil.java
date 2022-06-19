@@ -1,5 +1,8 @@
 package br.com.projeto.entra21.principal;
 
+import br.com.projeto.entra21.annotations.Reminder;
+
+@Reminder(value = "Super Classe com os dados dos usuários.")
 public class Perfil {
 
 	private String name;
@@ -82,7 +85,10 @@ public class Perfil {
 		this.password = password;
 	}
 
-	public void setGraduation(String next) {
+	public void getGraduation(String graduation) {
+		this.graduation = graduation;
+	}
+	public void setGraduation(String graduation) {
 		this.graduation = graduation;
 	}
 

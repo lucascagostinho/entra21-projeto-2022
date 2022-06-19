@@ -2,6 +2,9 @@ package br.com.projeto.entra21.principal;
 
 import java.util.LinkedList;
 
+import br.com.projeto.entra21.annotations.Reminder;
+
+@Reminder(value = "Listagem de esportes praticados")
 public class Esportes {
 
 	LinkedList<String> esportes = new LinkedList<>() {

@@ -3,10 +3,9 @@ package br.com.projeto.entra21.principal;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.Scanner;
 
+import br.com.projeto.entra21.annotations.EmAndamento;
 import br.com.projeto.entra21.menus.Menu;
 
 public class ComportamentosPerfil extends Menu {
@@ -15,7 +14,7 @@ public class ComportamentosPerfil extends Menu {
 
 	public ComportamentosPerfil(String titulo, ArrayList<String> assuntos) {
 		super(titulo, assuntos);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	@Override
@@ -27,7 +26,7 @@ public class ComportamentosPerfil extends Menu {
 			iniciarPratica();
 			break;
 		case 2:
-
+			
 			break;
 		case 3:
 
@@ -42,7 +41,8 @@ public class ComportamentosPerfil extends Menu {
 		}
 		return option;
 	}
-
+	
+	@EmAndamento //Criar a data que foi iniciada a prática
 	public static Duration iniciarPratica() {
 
 		byte option;

@@ -3,6 +3,7 @@ package br.com.projeto.entra21.menus;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import br.com.projeto.entra21.annotations.Reminder;
 import br.com.projeto.entra21.principal.Perfil;
 
 public class Menu {
@@ -17,6 +18,7 @@ public class Menu {
 		this.options = assuntos;
 	}
 
+	@Reminder(value = "Lógica do Menu")
 	public void optionsMenu() {
 		do {
 			System.out.println("------------------" + this.title + "------------------");
@@ -33,6 +35,7 @@ public class Menu {
 		} while (captureOption() != 0);
 	}
 
+	@Reminder(value = "Construção do Menu")
 	public byte captureOption() {
 		byte option;
 		option = input.nextByte();
@@ -43,7 +46,7 @@ public class Menu {
 			System.exit(-1);
 			break;
 		case 0:
-			System.out.println("See you later!");
+			System.out.println("Returning...");
 			break;
 		}
 		return option;
