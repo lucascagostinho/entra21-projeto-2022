@@ -15,7 +15,7 @@ public class MenuCadastro extends Menu {
 	}
 
 	@Override
-	public byte captureOption() { // TODO 02-logica herança
+	public byte captureOption() { // TODO 02-poo herança
 		byte option = super.captureOption();
 
 		switch (option) { // TODO 01-logica switch-case

@@ -7,14 +7,14 @@ public class Administrator extends Perfil{ //TODO 02-logica herança
 
 	}
 
-	//TODO 02-metodo construtor
+	//TODO 02-poo metodo construtor
 	public Administrator(String name, String lastName, String birthDate, String genre, String email, String password,
 			String graduation) {
 		super(name, lastName, birthDate, genre, email, password, graduation);
 
 	}
 	
-	//TODO 02-metodo construtor
+	//TODO 02-poo metodo construtor
 	public Administrator(String name, String lastName, String birthDate, String genre) {
 		super(name, lastName, birthDate, genre);
 

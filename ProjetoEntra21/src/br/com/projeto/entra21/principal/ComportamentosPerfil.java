@@ -71,28 +71,28 @@ public class ComportamentosPerfil extends Menu {
 				optionPratice = input.nextByte();
 
 				if (optionPratice != +1) {
-					throw new StopPracticeException(); // TODO 04-logica throw e exception
+					throw new StopPracticeException(); // TODO 03-avançado throw e exception
 				}
 
 			} catch (InputMismatchException e) { // TODO 03-avançado exceptions
 
 				input = new Scanner(System.in);
 
-			} catch (StopPracticeException e) { // TODO 03-avançado exceptions personalizada
+			} catch (StopPracticeException e) { // TODO 03-avançado exceptions personalizadas
 
 				input = new Scanner(System.in);
 			}
 
 		} while (optionPratice != 1);
 
-		Instant end = Instant.now(); // TODO 01-logica duração fim
+		Instant end = Instant.now(); // TODO 03-avançado duração fim
 
-		Duration time = Duration.between(start, end); // TODO 01-logica duração total
+		Duration time = Duration.between(start, end); // TODO 03-avançado duração total
 
 		System.out
 				.println("You practiced " + Sports.values()[optionSport] + " during " + time.toSeconds() + " seconds");
 
-		PRATICAS.add(new Pratice(LocalDateTime.now(), time.toSeconds(), Sports.values()[optionSport])); // TODO 01-logica DateTime
+		PRATICAS.add(new Pratice(LocalDateTime.now(), time.toSeconds(), Sports.values()[optionSport])); // TODO 03-avançado DateTime
 																										 
 																										
 

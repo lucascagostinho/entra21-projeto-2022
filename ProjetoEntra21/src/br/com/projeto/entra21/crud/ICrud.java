@@ -6,7 +6,7 @@ import java.util.Arrays;
 import br.com.projeto.entra21.annotations.Reminder;
 
 @Reminder(value = "Interface with generics for creating CRUDs")
-public interface ICrud<A> { // TODO 03-logica interface, generics e CRUD
+public interface ICrud<A> { // TODO 03-avançado interface, generics e CRUD
 	ArrayList<String> options = new ArrayList<String>(Arrays.asList("List", "Add", "Search", "Edit", "Delete"));
 
 	public void list(ArrayList<A> list);

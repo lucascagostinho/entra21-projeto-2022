@@ -61,7 +61,7 @@ public class Menu {
 		}
 	}
 
-	public String getTitle() { // TODO 02-logica encapsulamento
+	public String getTitle() { // TODO 02-poo encapsulamento
 		return title;
 	}
 

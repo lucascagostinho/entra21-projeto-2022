@@ -33,8 +33,7 @@ public class Main {
 				break;
 
 			case 1:
-				Login.login(); // Retornar mensagem de usuário não existe quando digitar um e email não
-								// existente
+				Login.login(); 
 				break;
 
 			default:

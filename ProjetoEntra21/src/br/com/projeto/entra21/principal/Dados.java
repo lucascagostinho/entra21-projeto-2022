@@ -7,8 +7,8 @@ import br.com.projeto.entra21.annotations.Reminder;
 @Reminder(value = "Create and initialize user.")
 public class Dados {
 
-	// TODO 01-ArrayList
-	public static ArrayList<Administrator> administrator = new ArrayList<>(); // TODO 01-ArrayList
+	// TODO 01-logica ArrayList
+	public static ArrayList<Administrator> administrator = new ArrayList<>(); // TODO 01-logica ArrayList
 	public static ArrayList<Coach> coaches = new ArrayList<>();
 	public static ArrayList<Practitioner> practitioner = new ArrayList<>();
 

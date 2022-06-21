@@ -14,7 +14,7 @@ public class CoachCRUD extends Menu implements ICrud<Coach> {
 	}
 
 	@Override
-	public byte captureOption() { // TODO 02-logica herança
+	public byte captureOption() { // TODO 02-poo herança
 		byte option = super.captureOption();
 
 		switch (option) {

@@ -5,25 +5,25 @@ import java.time.LocalDateTime;
 import br.com.projeto.entra21.annotations.Reminder;
 
 @Reminder(value = "Super Class with the data obtained during practice.")
-public class Pratice { // TODO 02-logica super classe
+public class Pratice { // TODO 02-poo super classe
 
 	private LocalDateTime date;
 	private long duration;
 	private Sports sport;
 
 	@Override
-	public String toString() { // TODO 03-metodo wrapper
+	public String toString() { // TODO 02-poo metodo wrapper
 		return "Pratice [date=" + date + ", duration=" + duration + ", sport=" + sport + "]";
 	}
 
-	public Pratice(LocalDateTime date, long duration, Sports sport) { // TODO 02-metodo construtor
+	public Pratice(LocalDateTime date, long duration, Sports sport) { // TODO 02-poo metodo construtor
 		super();
 		this.date = date;
 		this.duration = duration;
 		this.sport = sport;
 	}
 
-	// TODO 02-logica encapsulamento
+	// TODO 02-poo encapsulamento
 	public LocalDateTime getDate() {
 		return date;
 	}
