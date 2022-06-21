@@ -38,7 +38,7 @@ public class ComportamentosPerfil extends Menu {
 		byte optionPratice = 0;
 		byte optionSport = 0;
 
-		System.out.println("Informe o esporte que deseja praticar");
+		System.out.println("Inform the sport you want to practice");
 		for (int position = 0; position < Sports.values().length; position++) {
 			System.out.println(position + " - " + Sports.values()[position].getValor());
 
@@ -92,9 +92,9 @@ public class ComportamentosPerfil extends Menu {
 		System.out
 				.println("You practiced " + Sports.values()[optionSport] + " during " + time.toSeconds() + " seconds");
 
-		PRATICAS.add(new Pratice(LocalDateTime.now(), time.toSeconds(), Sports.values()[optionSport])); // TODO
-																										// 01-logica
-																										// data + tempo
+		PRATICAS.add(new Pratice(LocalDateTime.now(), time.toSeconds(), Sports.values()[optionSport])); // TODO 01-logica DateTime
+																										 
+																										
 
 		PRATICAS.forEach(pratice -> {
 			System.out.println(pratice);

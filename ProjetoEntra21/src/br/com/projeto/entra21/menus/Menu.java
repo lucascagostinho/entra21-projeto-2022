@@ -56,13 +56,13 @@ public class Menu {
 			return option;
 
 		} catch (InputMismatchException e) {
-			System.out.println("Invalid option, try again:"); // Rever
+			System.out.println("Invalid option, try again:");
 			input = new Scanner(System.in);
 			return captureOption();
 		}
 	}
 
-	public String getTitle() { // TODO 02-logica gets e sets
+	public String getTitle() { // TODO 02-logica encapsulamento
 		return title;
 	}
 

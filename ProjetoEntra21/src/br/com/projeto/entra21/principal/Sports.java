@@ -5,7 +5,7 @@ import br.com.projeto.entra21.annotations.Reminder;
 @Reminder(value = "Lista de ENUMs com os esportes que podem ser praticados.")
 public enum Sports { //TODO 03-classe ENUM
 	
-	FUTEBOl("Futebol"),
+	FUTEBOL("Futebol"),
 
 	CORRIDA("Corrida"),
 

@@ -4,6 +4,12 @@ public class StopPracticeException extends Exception { // TODO 01-logica avançad
 
 	public StopPracticeException() {
 
+		super("Only option 1 to stop code");
+				
+	}
+	
+	public StopPracticeException(String mensage) {
+		super(mensage);
 	}
 
 }
