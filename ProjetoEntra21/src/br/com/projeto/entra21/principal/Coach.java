@@ -2,8 +2,6 @@ package br.com.projeto.entra21.principal;
 
 public class Coach extends Perfil {
 
-	private String fraseMotivacional;
-
 	public Coach() {
 		super();
 
@@ -18,14 +16,6 @@ public class Coach extends Perfil {
 	public Coach(String name, String lastName, String birthDate, String genre) {
 		super(name, lastName, birthDate, genre);
 
-	}
-
-	public String getFraseMotivacional() {
-		return fraseMotivacional;
-	}
-
-	public void setFraseMotivacional(String fraseMotivacional) {
-		this.fraseMotivacional = fraseMotivacional;
 	}
 
 }

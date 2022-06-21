@@ -6,7 +6,7 @@ import java.time.LocalDateTime;
 public class Pratica {
 
 	private LocalDateTime data;
-	private Duration duracao;
+	private long duracao;
 	private Esportes esporte;
 	
 	
@@ -16,7 +16,7 @@ public class Pratica {
 		return "Pratica [data=" + data + ", duracao=" + duracao + ", esporte=" + esporte + "]";
 	}
 
-	public Pratica(LocalDateTime data, Duration duracao, Esportes esporte) {
+	public Pratica(LocalDateTime data, long duracao, Esportes esporte) {
 		super();
 		this.data = data;
 		this.duracao = duracao;
@@ -31,11 +31,11 @@ public class Pratica {
 		this.data = data;
 	}
 
-	public Duration getDuracao() {
+	public Long getDuracao() {
 		return duracao;
 	}
 
-	public void setDuracao(Duration duracao) {
+	public void setDuracao(Long duracao) {
 		this.duracao = duracao;
 	}
 

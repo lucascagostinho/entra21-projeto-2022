@@ -8,9 +8,9 @@ import br.com.projeto.entra21.principal.Coach;
 import br.com.projeto.entra21.principal.Dados;
 
 
-public class CoachCRUD extends Menu implements ICrud<Coach> {
+public class AdministradorCRUD extends Menu implements ICrud<Coach> {
 
-	public CoachCRUD(String titulo, ArrayList<String> assuntos) {
+	public AdministradorCRUD(String titulo, ArrayList<String> assuntos) {
 		super(titulo, assuntos);
 	}
 

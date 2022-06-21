@@ -10,13 +10,13 @@ public class Main {
 
 	static Scanner input = new Scanner(System.in);
 
-	public static void main(String[] args) { //TODO 01-logica menu
+	public static void main(String[] args) { // TODO 01-logica menu
 
 		byte option = 0;
 		Dados.inicializarListas();
-		do {	//TODO 01-logica do-while
+		do { // TODO 01-logica do-while
 			System.out.println(menu());
-			try { //TODO 03-avançado exceptions
+			try { // TODO 03-avançado exceptions
 				option = input.nextByte();
 			} catch (Exception e) {
 
@@ -41,7 +41,7 @@ public class Main {
 
 			}
 
-		} while (option != 0); //TODO 01-logica operador de igualdade
+		} while (option != 0); // TODO 01-logica operador de igualdade
 		System.out.println("Thank you and welcome back!");
 	}
 
