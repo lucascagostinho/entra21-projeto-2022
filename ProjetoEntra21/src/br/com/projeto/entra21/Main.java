@@ -1,40 +1,40 @@
 package br.com.projeto.entra21;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
-
+import br.com.projeto.entra21.annotations.Reminder;
 import br.com.projeto.entra21.cadastro.Login;
-import br.com.projeto.entra21.cadastro.Register;
 import br.com.projeto.entra21.principal.Dados;
 
 public class Main {
 
 	static Scanner input = new Scanner(System.in);
 
-	public static void main(String[] args) {
+	public static void main(String[] args) { // TODO 01-logica menu
 
-		byte option = 0;
-		Dados.inicializarListas();
-		do {
+		byte option; // TODO 01-logica variavel
+
+		Dados.initializeLists();
+
+		do { // TODO 01-logica do-while
 			System.out.println(menu());
-			try {
-				option = input.nextByte();
-			} catch (Exception e) {
+			try { // TODO 03-avançado exceptions
+				option = input.nextByte(); // TODO 01-logica interação com o usuário
+			} catch (InputMismatchException e) {
 
-				System.out.println("Invalid option.");
 				option = -2;
-				continue;
+				input = new Scanner(System.in);
 			}
 
-			switch (option) {
+			switch (option) { // TODO 01-logica switch-case
 
 			case 0:
 				System.out.println("Going out...");
 				break;
 
 			case 1:
-				Login.login();
+				Login.login(); // Retornar mensagem de usuário não existe quando digitar um e email não
+								// existente
 				break;
 
 			default:
@@ -43,16 +43,16 @@ public class Main {
 
 			}
 
-		} while (option != 0);
+		} while (option != 0); // TODO 01-logica operador de igualdade
 		System.out.println("Thank you and welcome back!");
 	}
 
-	public static String menu() {
+	@Reminder(value = "First menu options.")
+	public static String menu() { // TODO 01-logica metodo com retorno
 
 		String menu = "Choose an option:";
-		menu += "\n\t0 - Exit";
+		menu += "\n\t0 - Exit"; // TODO 01-logica incremento
 		menu += "\n\t1 - Login";
-		
 
 		return menu;
 

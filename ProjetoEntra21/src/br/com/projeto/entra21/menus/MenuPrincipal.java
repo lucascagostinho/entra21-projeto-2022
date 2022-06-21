@@ -2,49 +2,48 @@ package br.com.projeto.entra21.menus;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.InputMismatchException;
 import java.util.Scanner;
+import br.com.projeto.entra21.annotations.Reminder;
+import br.com.projeto.entra21.principal.ComportamentosPerfil;
 
-import br.com.projeto.entra21.cadastro.Login;
-import br.com.projeto.entra21.cadastro.Register;
-import br.com.projeto.entra21.interfaces.ComportamentosPerfil;
+public class MenuPrincipal extends ComportamentosPerfil {
 
-public class MenuPrincipal extends ComportamentosPerfil{
+	public MenuPrincipal(String title, ArrayList<String> subject) {
+		super(title, subject);
 
-	public MenuPrincipal(String titulo, ArrayList<String> assuntos) {
-		super(titulo, assuntos);
-		// TODO Auto-generated constructor stub
 	}
 
 	static Scanner input = new Scanner(System.in);
-//https://github.com/oliota/entra21-modelo-projeto-backend-2022/blob/agil-logica-poo-avancado/ModeloBackendEntra21-2022/src/br/com/entra21/modelo2022/backend/area/logada/cadastros/crud/ClienteCRUD.java
-	// link exemplo prof
-	
-	public static void executar() {
+
+	@Reminder(value = "Go to main menu")
+	public static void execute() {
 		byte option = 0;
 
-		do {
+		do { // TODO 01-logica do-while
 			System.out.println(menu());
-			try {
-				option = input.nextByte();
-			} catch (Exception e) {
+			try { // TODO 03-avançado exceptions
+				option = input.nextByte(); // TODO 01-logica interação com o usuário
+			} catch (InputMismatchException e) {
 
-				System.out.println("Invalid option.");
 				option = -2;
-				continue;
+				input = new Scanner(System.in);
+
 			}
 
-			switch (option) {
+			switch (option) { // TODO 01-logica switch-case
 
 			case 0:
-				System.out.println("Going out...");
+				System.out.println("Returning...");
 				break;
 
 			case 1:
-				new MenuCadastro("Menu de Cadastros", new ArrayList<>(Arrays.asList("Coachs","Praticantes"))).optionsMenu();
+				new MenuCadastro("Registration menu", new ArrayList<>(Arrays.asList("Coaches", "Practitioners")))
+						.optionsMenu();
 				break;
 
 			case 2:
-				ComportamentosPerfil.iniciarPratica();
+				ComportamentosPerfil.startPractice();
 				break;
 
 			default:
@@ -56,12 +55,13 @@ public class MenuPrincipal extends ComportamentosPerfil{
 		} while (option != 0);
 	}
 
-	public static String menu() {
+	@Reminder(value = "Main menu options")
+	public static String menu() { // TODO 01-logica menu
 
 		String menu = "Choose an option:";
-		menu += "\n\t0 - Exit";
-		menu += "\n\t1 - Cadastros";
-		menu += "\n\t2 - Praticar";
+		menu += "\n\t0 - Back";
+		menu += "\n\t1 - Register";
+		menu += "\n\t2 - Pratice";
 
 		return menu;
 

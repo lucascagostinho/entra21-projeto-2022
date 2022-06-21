@@ -1,8 +1,9 @@
 package br.com.projeto.entra21.principal;
 
-import br.com.projeto.entra21.menus.Menu;
+import br.com.projeto.entra21.annotations.Reminder;
 
-public class Perfil {
+@Reminder(value = "Super Class with user data.")
+public class Perfil { // TODO 02-logica super classe
 
 	private String name;
 	private String lastName;
@@ -16,6 +17,7 @@ public class Perfil {
 		super();
 	}
 
+	// TODO 02-metodo construtor
 	public Perfil(String name, String lastName, String birthDate, String genre, String email, String password,
 			String graduation) {
 		super();
@@ -28,6 +30,7 @@ public class Perfil {
 		this.graduation = graduation;
 	}
 
+	// TODO 02-metodo construtor
 	public Perfil(String name, String lastName, String birthDate, String genre) {
 		super();
 		this.name = name;
@@ -36,6 +39,7 @@ public class Perfil {
 		this.genre = genre;
 	}
 
+	// TODO 02-logica encapsulamento
 	public String getName() {
 		return name;
 	}
@@ -84,7 +88,11 @@ public class Perfil {
 		this.password = password;
 	}
 
-	public void setGraduation(String next) {
+	public void getGraduation(String graduation) {
+		this.graduation = graduation;
+	}
+
+	public void setGraduation(String graduation) {
 		this.graduation = graduation;
 	}
 

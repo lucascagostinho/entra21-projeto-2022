@@ -3,7 +3,10 @@ package br.com.projeto.entra21.crud;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public interface ICrud<A> {
+import br.com.projeto.entra21.annotations.Reminder;
+
+@Reminder(value = "Interface com generics para criação dos CRUDs")
+public interface ICrud<A> { // TODO 03-logica interface, generics e CRUD
 	ArrayList<String> options = new ArrayList<String>(Arrays.asList("List", "Add", "Search", "Edit", "Delete"));
 
 	public void list(ArrayList<A> list);
