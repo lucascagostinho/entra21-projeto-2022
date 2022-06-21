@@ -1,42 +1,40 @@
 package br.com.projeto.entra21.principal;
 
-import java.util.LinkedList;
-
 import br.com.projeto.entra21.annotations.Reminder;
 
-@Reminder(value = "Listagem de esportes praticados")
-public class Esportes {
+@Reminder(value = "Lista de ENUMs com os esportes que podem ser praticados.")
+public enum Esportes {
+	
+	FUTEBOl("Futebol"),
 
-	LinkedList<String> esportes = new LinkedList<>() {
-		{
+	CORRIDA("Corrida"),
 
-			add(Esportes2.FUTEBOl.getValor());
-			add(Esportes2.CORRIDA.getValor());
-			add(Esportes2.CICLISMO.getValor());
-			add(Esportes2.TENNIS.getValor());
-			add(Esportes2.ESCALADA.getValor());
-			add(Esportes2.SURF.getValor());
-			add(Esportes2.VOLEI.getValor());
-			add(Esportes2.NATACAO.getValor());
-			add(Esportes2.SKATE.getValor());
-		}
-	};
+	CICLISMO("Ciclismo"),
 
-	public Esportes() {
-		super();
+	TENNIS("Tennis"),
+
+	ESCALADA("Escalada"),
+
+	SURF("Surf"),
+
+	VOLEI("Vôlei"),
+
+	NATACAO("Natação"),
+
+	SKATE("Skate");
+
+	private final String VALOR;
+
+	private Esportes(String valor) {
+
+		this.VALOR = valor;
+
 	}
 
-	public Esportes(LinkedList<String> esporteNome) {
-		super();
-		this.esportes = esporteNome;
-	}
+	public String getValor() {
 
-	public LinkedList<String> getEsporteNome() {
-		return esportes;
-	}
+		return this.VALOR;
 
-	public void setEsporteNome(LinkedList<String> esporteNome) {
-		this.esportes = esporteNome;
 	}
 
 }
