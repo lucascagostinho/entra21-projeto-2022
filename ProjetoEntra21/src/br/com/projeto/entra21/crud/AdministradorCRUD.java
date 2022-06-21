@@ -4,23 +4,23 @@ import java.util.ArrayList;
 
 import br.com.projeto.entra21.annotations.Reminder;
 import br.com.projeto.entra21.menus.Menu;
-import br.com.projeto.entra21.principal.Coach;
+import br.com.projeto.entra21.principal.Administrador;
 import br.com.projeto.entra21.principal.Dados;
 
 
-public class AdministradorCRUD extends Menu implements ICrud<Coach> {
+public class AdministradorCRUD extends Menu implements ICrud<Administrador> {
 
 	public AdministradorCRUD(String titulo, ArrayList<String> assuntos) {
 		super(titulo, assuntos);
 	}
 
 	@Override
-	public byte captureOption() { //TODO 02-logica-herança
+	public byte captureOption() { //TODO 02-logica herança
 		byte option = super.captureOption();
 
 		switch (option) {
 		case 1:
-			list(Dados.coachs);
+			list(Dados.administrador);
 			break;
 		case 2:
 			add();
@@ -39,80 +39,80 @@ public class AdministradorCRUD extends Menu implements ICrud<Coach> {
 		return option;
 	}
 
-	@Reminder(value = "Acessa a lista de coachs")
+	@Reminder(value = "Acessa a lista de admins")
 	@Override
-	public void list(ArrayList<Coach> list) {
-		list.forEach(coach -> {
-			System.out.println(coach.getEmail() + "---" + coach.getName());
+	public void list(ArrayList<Administrador> list) {
+		list.forEach(administrador -> {
+			System.out.println(administrador.getEmail() + "---" + administrador.getName());
 		});
 
 	}
 
-	@Reminder(value = "Adiciona um novo coach")
+	@Reminder(value = "Adiciona um novo admin")
 	@Override
 	public void add() {
-		Coach novo = captureValues();
+		Administrador novo = captureValues();
 		if (search(novo) != null) {
 			System.out.println("Não foi possível adicionar");
 		} else {
-			Dados.coachs.add(novo);
-			System.out.println("Coach adicionado");
+			Dados.administrador.add(novo);
+			System.out.println("Administrador adicionado");
 		}
 	}
 
-	@Reminder(value = "Busca dentro da lista de coachs")
+	@Reminder(value = "Busca dentro da lista de admins")
 	@Override
-	public Coach search(Coach key) {
-		Coach encontradoCoach = null;
-		for (Coach coach : Dados.coachs) {
-			if (coach.getEmail().equals(key.getEmail())) {
-				return coach;
+	public Administrador search(Administrador key) {
+		Administrador encontradoAdmin = null;
+		for (Administrador admin : Dados.administrador) {
+			if (admin.getEmail().equals(key.getEmail())) {
+				return admin;
 			}
 		}
 		return null;
 	}
 
-	@Reminder(value = "Edita um coach já existente.")
+	@Reminder(value = "Edita um admin já existente.")
 	@Override
-	public void edit(Coach key) {
-		Coach atual = search(key);
+	public void edit(Administrador key) {
+		Administrador atual = search(key);
 		if (atual != null) {
 			System.out.println("Alterando o Coach");
-			Coach editado = captureValues();
-			Dados.coachs.set(Dados.coachs.indexOf(atual), editado);
-			System.out.println("Coach editado");
+			Administrador editado = captureValues();
+			Dados.administrador.set(Dados.administrador.indexOf(atual), editado);
+			System.out.println("Administrador editado");
 		} else {
 			System.out.println("Não foi possivel editar");
 		}
 
 	}
 
-	@Reminder(value = "Deleta um coach")
+	@Reminder(value = "Deleta um admin")
 	@Override
-	public void delete(Coach key) {
-		Coach busca = search(key);
+	public void delete(Administrador key) {
+		Administrador busca = search(key);
 		if (busca == null) {
 			System.out.println("Não foi possivel deletar");
 		} else {
-			System.out.println("Coach deletado");
+			System.out.println("Administrador deletado");
 			Dados.coachs.remove(busca);
 		}
 
 	}
 
-	@Reminder(value = "Captura uma chave para coach")
+	@Reminder(value = "Captura uma chave para admin")
 	@Override
-	public Coach captureKey() {
+	public Administrador captureKey() {
 		System.out.println("Informe o email");
-		Coach chave = new Coach();
+		Administrador chave = new Administrador();
 		chave.setEmail(super.inputEntrada().next());
 		return chave;
 	}
 
-	@Reminder(value = "Captura um valor para coach")
+	@Reminder(value = "Captura um valor para admin")
 	@Override
-	public Coach captureValues() {
-		Coach formulario = new Coach();
+	public Administrador captureValues() {
+		Administrador formulario = new Administrador();
 		System.out.println("Name: ");
 		formulario.setName(super.getInput().next());
 
@@ -127,13 +127,13 @@ public class AdministradorCRUD extends Menu implements ICrud<Coach> {
 		return formulario;
 	}
 
-	@Reminder(value = "Acessa os detalhes do coach")
+	@Reminder(value = "Acessa os detalhes do admin")
 	@Override
-	public void viewDetails(Coach complete) {
+	public void viewDetails(Administrador complete) {
 		if (complete == null) {
-			System.out.println("Nenhum Coach localizado");
+			System.out.println("Nenhum Admin localizado");
 		} else {
-			System.out.println("Coach: " + complete.getName());
+			System.out.println("Admin: " + complete.getName());
 			System.out.println("Email " + complete.getEmail());
 			System.out.println("Data Nascimento " + complete.getBirthDate());
 		}

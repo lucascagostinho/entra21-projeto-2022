@@ -3,7 +3,7 @@ package br.com.projeto.entra21.principal;
 import br.com.projeto.entra21.annotations.Reminder;
 
 @Reminder(value = "Lista de ENUMs com os esportes que podem ser praticados.")
-public enum Esportes {
+public enum Esportes { //TODO 03-classe ENUM
 	
 	FUTEBOl("Futebol"),
 

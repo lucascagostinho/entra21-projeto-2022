@@ -1,6 +1,7 @@
 package br.com.projeto.entra21.menus;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import br.com.projeto.entra21.annotations.Reminder;
@@ -18,14 +19,14 @@ public class Menu {
 		this.options = assuntos;
 	}
 
-	@Reminder(value = "Lógica do Menu")
+	@Reminder(value = "Lógica do Menu") //TODO 01-logica menu
 	public void optionsMenu() {
-		do {
+		do { //TODO 01-logica do-while
 			System.out.println("------------------" + this.title + "------------------");
 			System.out.println("-1 = Exit");
 			System.out.println(" 0 = Back");
-			if (options != null && !options.isEmpty()) {
-				for (int counter = 0; counter < options.size(); counter++) {
+			if (options != null && !options.isEmpty()) { //TODO 01-logica if-else
+				for (int counter = 0; counter < options.size(); counter++) { //TODO 01-logica for
 					System.out.println(" " + (counter + 1) + " = " + options.get(counter));
 				}
 			} else {
@@ -37,22 +38,31 @@ public class Menu {
 
 	@Reminder(value = "Construção do Menu")
 	public byte captureOption() {
-		byte option;
-		option = input.nextByte();
 
-		switch (option) {
+		try {
+			byte option;
+			option = input.nextByte();
 
-		case -1:
-			System.exit(-1);
-			break;
-		case 0:
-			System.out.println("Returning...");
-			break;
+			switch (option) {
+
+			case -1:
+				System.exit(-1);
+				break;
+			case 0:
+				System.out.println("Returning...");
+				break;
+						
+			}
+			return option;
+			
+		} catch (InputMismatchException e) {
+			System.out.println("Invalid option, try again:"); //Rever
+			input = new Scanner(System.in);
+			return captureOption();
 		}
-		return option;
 	}
 
-	public String getTitle() {
+	public String getTitle() { //TODO 02-logica gets e sets
 		return title;
 	}
 
@@ -69,7 +79,7 @@ public class Menu {
 	}
 
 	public Perfil search() {
-		
+
 		return null;
 	}
 

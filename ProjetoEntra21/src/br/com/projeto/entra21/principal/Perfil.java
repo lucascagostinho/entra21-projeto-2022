@@ -3,7 +3,7 @@ package br.com.projeto.entra21.principal;
 import br.com.projeto.entra21.annotations.Reminder;
 
 @Reminder(value = "Super Classe com os dados dos usuários.")
-public class Perfil {
+public class Perfil { //TODO 02-logica super classe
 
 	private String name;
 	private String lastName;
@@ -17,6 +17,7 @@ public class Perfil {
 		super();
 	}
 
+	//TODO 02-metodo construtor
 	public Perfil(String name, String lastName, String birthDate, String genre, String email, String password,
 			String graduation) {
 		super();
@@ -29,6 +30,7 @@ public class Perfil {
 		this.graduation = graduation;
 	}
 
+	//TODO 02-metodo construtor
 	public Perfil(String name, String lastName, String birthDate, String genre) {
 		super();
 		this.name = name;
@@ -37,7 +39,8 @@ public class Perfil {
 		this.genre = genre;
 	}
 
-	public String getName() {
+	// TODO 02-logica encapsulamento	
+	public String getName() { 
 		return name;
 	}
 

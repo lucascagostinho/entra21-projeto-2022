@@ -15,10 +15,10 @@ public class MenuCadastro extends Menu {
 	}
 
 	@Override
-	public byte captureOption() {
+	public byte captureOption() { //TODO 02-logica herança
 		byte option = super.captureOption();
 
-		switch (option) {
+		switch (option) { //TODO 01-logica switch-case
 		case 1:
 			new CoachCRUD("Cadastro de Coachs", ICrud.options).optionsMenu();
 			break;

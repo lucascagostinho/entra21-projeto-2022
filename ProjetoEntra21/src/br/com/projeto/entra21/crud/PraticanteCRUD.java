@@ -16,7 +16,7 @@ public class PraticanteCRUD extends Menu implements ICrud<Praticante> {
 	}
 
 	@Override
-	public byte captureOption() { //TODO 02-logica-herança
+	public byte captureOption() { //TODO 02-logica herança
 		byte option = super.captureOption();
 
 		switch (option) {

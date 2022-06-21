@@ -20,9 +20,9 @@ public class Login {
 		String email = input.next(); // TODO 01-logica interação com o usuário
 		boolean localizado = false; // TODO 01-logica boolean
 		for (Coach coach : Dados.coachs) { // TODO 01-logica for
-			if (coach.getEmail().equals(email)) { // TODO 01-logica if-else
+			if (coach.getEmail().equals(email)) { // TODO 01-logica if
 				localizado = true;
-				if (verificarSenha(coach.getPassword())) {
+				if (verificarSenha(coach.getPassword())) { // TODO 01-logica if-else
 					MenuPrincipal.executar();
 				} else {
 					System.out.println("Senha incorreta para o coach");
@@ -32,9 +32,9 @@ public class Login {
 			}
 		}
 		for (Praticante praticante : Dados.praticantes) { // TODO 01-logica for
-			if (praticante.getEmail().equals(email)) { // TODO 01-logica if-else
+			if (praticante.getEmail().equals(email)) { // TODO 01-logica if
 				localizado = true;
-				if (verificarSenha(praticante.getPassword())) {
+				if (verificarSenha(praticante.getPassword())) { // TODO 01-logica if-else
 					MenuPrincipal.executar();
 				} else {
 					System.out.println("Senha incorreta para o praticante");
@@ -46,9 +46,9 @@ public class Login {
 		}
 		
 		for (Administrador administrador : Dados.administrador) { // TODO 01-logica for
-			if (administrador.getEmail().equals(email)) { // TODO 01-logica if-else
+			if (administrador.getEmail().equals(email)) { // TODO 01-logica if
 				localizado = true;
-				if (verificarSenha(administrador.getPassword())) {
+				if (verificarSenha(administrador.getPassword())) { // TODO 01-logica if-else
 					MenuPrincipal.executar();
 				} else {
 					System.out.println("Senha incorreta para o praticante");
@@ -62,7 +62,7 @@ public class Login {
 	}
 
 	@Reminder(value = "Captura e retorna a senha")
-	private static boolean verificarSenha(String password) {
+	private static boolean verificarSenha(String password) { // TODO 01-logica metodo com retorno e parâmetro
 		System.out.println("Informe a senha");
 
 		return password.equals(input.next()); // TODO 01-logica interação com o usuário

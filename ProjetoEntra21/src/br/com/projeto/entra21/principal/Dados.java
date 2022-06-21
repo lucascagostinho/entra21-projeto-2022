@@ -7,7 +7,8 @@ import br.com.projeto.entra21.annotations.Reminder;
 @Reminder(value = "Cria e inicializa os usuários.")
 public class Dados {
 
-	public static ArrayList<Administrador> administrador = new ArrayList<>();
+	//TODO 01-ArrayList
+	public static ArrayList<Administrador> administrador = new ArrayList<>(); //TODO 01-ArrayList
 	public static ArrayList<Coach> coachs = new ArrayList<>();
 	public static ArrayList<Praticante> praticantes = new ArrayList<>();
 
@@ -22,7 +23,7 @@ public class Dados {
 	@Reminder(value = "Inicializa as listas de coachs.")
 	public static void inicializarCoachs() {
 
-		Coach coach = new Coach("Stephanie", "Dias", "27/11/1993", "F", "stephanie@email.com", "1234", "graduação");
+		coachs.add(new Coach("Stephanie", "Dias", "27/11/1993", "F", "stephanie@email.com", "1234", "graduação"));
 
 	}
 
