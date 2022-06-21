@@ -4,6 +4,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 import br.com.projeto.entra21.annotations.Reminder;
 import br.com.projeto.entra21.cadastro.Login;
+import br.com.projeto.entra21.principal.About;
 import br.com.projeto.entra21.principal.Dados;
 
 public class Main {
@@ -22,7 +23,7 @@ public class Main {
 				option = input.nextByte(); // TODO 01-logica interação com o usuário
 			} catch (InputMismatchException e) {
 
-				option = -2;
+				option = -3;
 				input = new Scanner(System.in);
 			}
 
@@ -34,6 +35,10 @@ public class Main {
 
 			case 1:
 				Login.login(); 
+				break;
+				
+			case 2:
+				System.out.println(About.projectAbout());
 				break;
 
 			default:
@@ -48,10 +53,12 @@ public class Main {
 
 	@Reminder(value = "First menu options.")
 	public static String menu() { // TODO 01-logica metodo com retorno
-
-		String menu = "Choose an option:";
+		
+		String menu = "Entra21 Project Yellow Team\n\n";
+		menu += "Choose an option:";
 		menu += "\n\t0 - Exit"; // TODO 01-logica incremento
 		menu += "\n\t1 - Login";
+		menu += "\n\t2 - About";
 
 		return menu;
 
