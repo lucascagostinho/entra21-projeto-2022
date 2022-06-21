@@ -10,92 +10,43 @@ O projeto atualmente está na sua versão da aplicação dos conceitos aprendido
 
 #### Lógica de programação
 
-> Git
-- [x] Repositório
-- [x] Documentação
-- [x] README.md
-- [ ] Replit
-
-> Organização do projeto
-
-- [x] Packages / sub-packages
-- [x] Nomenclatura
-
-> Elementos básicos
-
-- [x] variáveis
-- [ ] Constantes
-- [x] Comentários
-
-> Estruturas de decisão
-
-- [x] if, else-if, else
-- [x] switch
-
-> Laços de repetição
-
-- [x] for
-- [x] while, do-while
-
-> Modularização
-
-- [x] Métodos com ou sem parâmetros e com ou sem retornos
-- [x] Recursividade
+- [x] Git (Repositório, README, replit)
+- [x] Organização do Projeto (packages, subpackages, nomenclatura)
+- [x] Elementos Básicos (variáveis, constantes e comentários)
+- [x] Estruturas de decisão (if, else if, else, switch)
+- [x] Laços de repetição (for, while, do while)
+- [x] Modularização (métodos, retornos e recursividade)
 
 #### Orientação a objetos
 
-> Classes
-
-- [ ] Diagrama de classe
-- [x] Atributos
-- [x] Construtores
-- [x] Encapsulamento
-- [x] Métodos específicos
-- [x] Instanciar objetos
-
-> Herança
-
-- [x] Extends
-- [ ] criar novos construtores com base na super classe
-- [ ] Polimorfismo
-- [ ] Apenas aproveitar os métodos
-- [ ] Fazer completamente de forma especifica
-- [ ] Sobrescrever para:
-  - [ ] Fazer de forma especifica
-  - [ ] Aproveitar o comportamento e fazer um complemento
-
-> Polimorfismo
-
-- Interfaces
+- [x] Classes (diagrama, atributos, construtores, encapsulamento, métodos, instanciar objetos)
+- [x] Herança (extends, construtores com base na super classe)
+- [x] Polimorfismo (interfaces)
 
 #### Java avançado
 
-> Classes wrapper
-
-- [ ] ENUM
-- [ ] Annotations
-- [x] Collections
-  - [x] ArrayList
-  - [ ] LinkedList
-  - [ ] HashSet
-  - [ ] HashMap
-- [ ] Funções Lambda
-- [ ] Generics
-- [ ] Dates
-- [ ] Exceptions
+- [x] Classes Wrapper
+- [x] Enum
+- [x] Annotations
+- [x] Collections (ArrayList, LinkedList, HashSet, HashMap)
+- [x] Funções Lambda
+- [x] Generics
+- [x] Dates
+- [x] Exceptions
 
 ## Diagrama de classe
 
-
-## Pré-requisitos
-
-Atualmente a versão 1.0 do ambiente do projeto, está disponível para utilização via replit no link abaixo. O mesmo será responsável pela execução da aplicação
-
-[**Link Replit**](https://github.com/lucascagostinho)
+![Diagrama de classes](./img/Diagrama%20Projeto%20Entra%2021.png "Diagrama de classes.")
 
 ## Execução
 
-Exemplo da execução.(Fazendo)
+> CRUD de usuários
+![CRUD de usuários](./img/crud.gif "CRUD de usuários")
+
+> Função praticar
+![Função praticars](./img/pratica.gif "Função praticar")
+
+
 
 ## Autores
 

@@ -67,7 +67,7 @@ public class ComportamentosPerfil extends Menu {
 		do {
 
 			try { // TODO 03-avançado exceptions
-				System.out.println("Enter 1 to practice.");
+				System.out.println("Enter 1 to stop practice.");
 				optionPratice = input.nextByte();
 
 				if (optionPratice != +1) {

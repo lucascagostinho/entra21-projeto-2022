@@ -3,7 +3,6 @@ package br.com.projeto.entra21.menus;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
 import br.com.projeto.entra21.annotations.Reminder;
 import br.com.projeto.entra21.principal.Perfil;
 
@@ -56,9 +55,9 @@ public class Menu {
 			return option;
 
 		} catch (InputMismatchException e) {
-			System.out.println("Invalid option, try again:");
+						
 			input = new Scanner(System.in);
-			return captureOption();
+			return -2;
 		}
 	}
 
